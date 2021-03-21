@@ -17,9 +17,15 @@ export class Accounts extends Entity {
 
   @property({
     type: 'string',
-    required: true,
+    required: false,
   })
-  password: string;
+  iv: string;
+
+  @property({
+    type: 'string',
+    required: false,
+  })
+  content: string;
 
   @property({
     type: 'string',
